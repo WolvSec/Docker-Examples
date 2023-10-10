@@ -1,0 +1,15 @@
+docker build -t flask_app:0.1 .
+docker images
+docker run --name flask-example -d -p 5000:5000 flask_app:0.1
+docker ps
+
+
+docker run busybox
+docker run busybox echo "hello from busybox"
+docker run -it busybox sh
+
+docker exec -it flask_app:0.1 /bin/sh
+
+docker stop flask-example
+docker rm flask-example
+docker rmi flask_app:0.1
